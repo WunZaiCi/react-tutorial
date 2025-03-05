@@ -1,18 +1,22 @@
-import {useEffect, useState} from "react";
-import styled from "styled-components";
+import {useContext, useEffect, useState} from "react";
+import styled, {ThemeContext} from "styled-components";
 
 const LoadDiv = styled.div`
+    height: 100%;
     padding: 36px;
+    color: ${({theme }) => theme.color};
+    background-color:${({theme }) => theme.background};
 `
 export const withLoading = (WrapperComponent, fetchData) => {
     return () => {
         const [data, setData] = useState(null);
+        const [theme] = useContext(ThemeContext);
 
         useEffect(() => {
             fetch();
         }, []);
 
-        const Loading = (<LoadDiv>ロード中...</LoadDiv>)
+        const Loading = (<LoadDiv theme={theme}>ロード中...</LoadDiv>)
 
         const fetch = async () => {
             const data = await fetchData();
