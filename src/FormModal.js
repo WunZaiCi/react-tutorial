@@ -1,8 +1,9 @@
 import {Modal} from "./components/modal";
-import styled, {ThemeContext} from "styled-components";
+import styled from "styled-components";
+import {ThemeContext} from "./contexts/ThemeContext";
 import {Button} from "./components/button";
 import {useContext} from "react";
-import {THEMES} from "./const/contexts/ThemeContext";
+import {THEMES} from "./contexts/ThemeContext";
 
 const Container = styled.div`
     width: 240px;

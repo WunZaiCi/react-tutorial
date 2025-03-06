@@ -4,10 +4,11 @@ import {Form} from "./Form";
 import {getLanguages} from "./const/languages";
 import {withLoading} from "./hoc/withLoading";
 import {Header} from "./Header";
-import styled, {ThemeContext} from "styled-components";
+import styled from "styled-components";
+import { ThemeContext } from "./contexts/ThemeContext";
 
 const Container = styled.div`
-    height: 100%;
+    min-height: 100vh;
     color: ${({theme}) => theme.color};
     background-color: ${({theme}) => theme.background};
 `

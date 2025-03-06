@@ -2,8 +2,8 @@ import {withLoading} from "./hoc/withLoading";
 import {getLanguages} from "./const/languages";
 import App from "./App";
 import {useState} from "react";
-import {THEMES} from "./const/contexts/ThemeContext";
-import { ThemeContext } from 'styled-components';
+import {THEMES} from "./contexts/ThemeContext";
+import { ThemeContext } from "./contexts/ThemeContext";
 
 const AppComponent = withLoading(App, getLanguages)
 
